@@ -10,6 +10,8 @@ int main() {
     int QntMovimentoBispo = 5;
     int QntMovimentoTorre = 5;
     int QntMovimentoRainha = 8;
+    int QntMovimentoCavalo1 = 2;
+    int QntMovimentoCavalo2 = 1;
     int i;
     int j=0;
     int k=0;
@@ -19,6 +21,8 @@ int main() {
     int TipoMovimentoBispo = 6;
     int TipoMovimentoTorre = 3;
     int TipoMovimentoRainha = 2;
+    int TipoMovimentoCavalo1 = 4;
+    int TipoMovimentoCavalo2 = 2;
 
     // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
@@ -61,7 +65,8 @@ int main() {
             break;
         }
     }
-    
+    j=0;
+
     // Implementação de Movimentação da Rainha
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
     printf("Esses foram os movimentos da Rainha escolhidos:\n");
@@ -79,11 +84,52 @@ int main() {
             break;
         }
     } while (k < QntMovimentoRainha);
+    k=0;
 
-
-    // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
     // Um loop pode representar a movimentação horizontal e outro vertical.
+    printf("Esses foram os movimentos do Cavalo escolhidos:\n");
+    while (k < QntMovimentoCavalo2)
+    {
+        for (j=0; j < QntMovimentoCavalo1; j++)
+    {
+        switch (TipoMovimentoCavalo1)
+        {
+        case 1:
+            printf("Direita\n");
+            break;
+        case 2:
+            printf("Esquerda\n");
+            break;
+        case 3:
+            printf("Cima\n");
+            break;
+        case 4:
+            printf("Baixo\n");
+            break;
+        }
+    }
+    switch (TipoMovimentoCavalo2)
+        {
+        case 1:
+            printf("Direita\n");
+            k++;
+            break;
+        case 2:
+            printf("Esquerda\n");
+            k++;
+            break;
+        case 3:
+            printf("Cima\n");
+            k++;
+            break;
+        case 4:
+            printf("Baixo\n");
+            k++;
+            break;
+        }
+    }
+    
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
